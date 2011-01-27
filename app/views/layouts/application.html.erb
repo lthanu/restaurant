@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Spice Route</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id='header'>
+		<span id='logo'><%=link_to "SPICE ROUTE", root_path%></span>
+		<span id='messages'>
+			<span class="notice"><%= notice %>
+			<span class="alert"><%= alert %>
+		</span>
+		<span id='nav'>
+			<ul class="hmenu">
+				<li><%= link_to "Menu", home_menu_path%></li>
+				<li><%= link_to "News", home_news_path%></li>
+				<li><%= link_to "Gallery", home_pictures_path%></li>
+			</ul>
+		</span>
+	</div>
+	<div id='main'>
+		<%= yield %>
+	</div>
+	<div id='footer'>
+		<span class='tiny'>Copyright &copy; Spice Route LLC &nbsp;&nbsp;</span>
+		<ul class="hmenu">
+			<li><%= link_to "Menu", home_menu_path%></li>
+			<li><%= link_to "News", home_news_path%></li>
+			<li><%= link_to "Gallery", home_pictures_path%></li>
+		</ul>
+	</div>
+</body>
+</html>
